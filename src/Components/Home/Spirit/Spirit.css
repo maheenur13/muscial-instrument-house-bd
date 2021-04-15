@@ -1,0 +1,17 @@
+.spirit-section-design::before{
+    content:'';
+    background:url('../../../img/homeBg/spirit/bg.jpg')center center/cover;
+    position: fixed;
+    top: 0%;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+
+}
+.spirit-section-design{
+    background-image: linear-gradient(120deg, #42424246, #0000003b);
+    overflow: hidden;
+    height:400px;
+    position: relative; 
+}

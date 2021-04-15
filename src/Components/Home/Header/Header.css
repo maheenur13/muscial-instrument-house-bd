@@ -1,0 +1,31 @@
+.bg-image-style{
+    /* width: 80%; */
+    height:920px;
+}
+.carousel-container{
+    /* height:600px; */
+    /* border: 2px solid yellow; */
+}
+.carousel-caption{
+    /* position:absolute; */
+    top: 40%;
+    position:fixed;
+    
+}
+.caption-box{
+   
+    border: 7px solid rgb(61, 61, 61);
+    width:30%;
+    letter-spacing:#333333;
+    /* text-align: justify; */
+    text-align: left;
+    color: #333333;
+    flex-direction: column;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(255, 255, 255, 0.445);
+    padding:20px 95px 20px 95px;
+    height:320px;
+    margin: auto;
+}
