@@ -7,7 +7,7 @@ import { Card, Button, CardGroup,CardDeck } from 'react-bootstrap';
 const NewsAndArticle = () => {
     return (
         <section className="news-article-design pt-5 pb-5">
-            <div className="w-50 m-auto">
+            <div className="w-75 m-auto">
                 <CardDeck>
                     <Card className=" shadow-sm">
                         <Card.Img variant="top" src={image1} />

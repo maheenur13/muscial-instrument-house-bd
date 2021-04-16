@@ -1,0 +1,8 @@
+.services-design{
+    background-image: url('../../../img/homeBg/guitars/guitar-bg-repair.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height:550px;
+    position: relative; 
+}

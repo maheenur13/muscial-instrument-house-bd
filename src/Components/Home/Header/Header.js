@@ -11,10 +11,10 @@ import bg5 from '../../../img/homeBg/drums.jpg';
 import './Header.css';
 const Header = () => {
     return (
-        <header>
+        <header style={{position:'relative'}}>
             <Navigationbar></Navigationbar>
             <div className="carousel-container">
-                <Carousel>
+                <Carousel fade>
                     <Carousel.Item interval={1200}>
                         <img
                             className="d-block w-100 bg-image-style"
