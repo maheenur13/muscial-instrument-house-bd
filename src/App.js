@@ -11,7 +11,8 @@ import {
 import { createContext, useState } from 'react';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-
+import Book from './Components/Dashboard/Book/Book';
+import ServiceClaimed from './Components/ServiceClaimed/ServiceClaimed';
 
 export const userContext = createContext();
 function App() {
@@ -32,6 +33,9 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/serviceClaimed/:id">
+          <ServiceClaimed></ServiceClaimed>
           </Route>
         </Switch>
       </Router>

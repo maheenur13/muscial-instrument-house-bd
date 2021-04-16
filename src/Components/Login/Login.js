@@ -3,14 +3,11 @@ import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import firebase from "firebase/app";
 import firebaseConfig from './firebase.config';
-// Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
 import './Login.css';
 import { userContext } from '../../App';
 import Navbar from '../../Components/Home/Navigationbar/Navigationbar';
-// import LoginImage from '../../images/loginImage.png';
-// console.log(firebaseConfig);
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 } else {
@@ -39,6 +36,7 @@ const Login = () => {
     const history = useHistory();
     const location=useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
+    
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         firebase.auth()
@@ -54,8 +52,10 @@ const Login = () => {
                 newUserInfo.name=user.displayName;
                 setUser(newUserInfo);
                 setLoggedInUser(newUserInfo);
+                
                 sessionStorage.setItem('user', newUserInfo.displayName);
                 setUserToken();
+                // signInParmenent();
                 history.replace(from);
             }).catch((error) => {
                 // Handle Errors here.
@@ -64,6 +64,21 @@ const Login = () => {
             });
 
     }
+//     const signInParmenent =()=>{
+//         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+//   .then(() => {
+//     var provider = new firebase.auth.GoogleAuthProvider();
+//     // In memory persistence will be applied to the signed in Google user
+//     // even though the persistence was set to 'none' and a page redirect
+//     // occurred.
+//     return firebase.auth().signInWithRedirect(provider);
+//   })
+//   .catch((error) => {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//   });
+//     }
     
 const setUserToken = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
