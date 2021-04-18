@@ -15,6 +15,7 @@ import MakeAdmin from '../../Admin/MakeAdmin/MakeAdmin';
 import AddServices from '../../Admin/AddServices/AddServices';
 import Navigationbar from '../../../Components/Home/Navigationbar/Navigationbar'
 import UpdateServices from '../UpdateServices/UpdateServices';
+import AddProducts from '../../Admin/AddInstruments/AddProducts';
 export const isAdminContext = createContext();
 const Dashboard = () => {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -56,6 +57,9 @@ const Dashboard = () => {
                                 </Route>
                                 <Route path="/dashboard/updateServices">
                                     <UpdateServices></UpdateServices>
+                                </Route>
+                                <Route path="/dashboard/instruments">
+                                   <AddProducts></AddProducts>
                                 </Route>
 
                             </Switch>

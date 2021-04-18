@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom';
 const UpdateServices = () => {
     const history = useHistory();
     const [updateService,setUpdateService]= useState([]);
-    const [updatedTrue,setUpdatedTrue]=useState(false);
     useEffect(()=>{
         fetch('http://localhost:5000/addNewService')
         .then(res=>res.json())
@@ -36,18 +35,14 @@ const UpdateServices = () => {
         })
     }
     const handleUpdateService = (id,e)=>{
-        setUpdatedTrue(true)
-        console.log(id)
-//         fetch('http://localhost:5000/updateStatus/'+id,{
-//     method:'PATCH',
-//     headers:{'Content-Type':'application/json'},
-//     body: JSON.stringify()
-//   })
-//   .then(res=>res.json())
-//   .then(data=>{
-//     console.log(data);
-//   })
+        // var serviceID=id;
+        alert('coming soon...')
+
+
     }
+
+
+   
     return (
         <div>
             <h1>This is update services</h1>
@@ -74,11 +69,10 @@ const UpdateServices = () => {
         <td><FontAwesomeIcon onClick={(e)=>handleDeleteService(service._id,e)} icon={faTrash}/></td>
         
         </tr>)
-}
-    
-    
+}   
   </tbody>
 </Table>
+
         </div>
     );
 };

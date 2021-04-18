@@ -13,11 +13,13 @@ const Home = () => {
            
             <Header></Header>
             <Spirit></Spirit>
-            <NewsAndArticle></NewsAndArticle>
+            
             <hr style={{backgroundColor:'white'}}/>
             <Products></Products>
             <Services></Services>
+            <NewsAndArticle></NewsAndArticle>
             <Reviews></Reviews>
+
             <Contact></Contact>
             <Footer></Footer>
         </div>

@@ -11,10 +11,10 @@ const Reviews = () => {
         })
     },[])
     return (
-        <section  style={{backgroundColor:'white',padding:'30px'}}>
-            <div >
+        <section  style={{backgroundColor:'rgb(231, 231, 219)',padding:'30px'}}>
+            <div className="border">
                 <h1 className="text-center pb-4">Reviews</h1>
-                <CardDeck className="container m-auto ">
+                <CardDeck className="container m-auto d-flex justify-content-around align-items-center flex-wrap">
                 {
                     reviews.map(review=><Review review={review} key={review._id}></Review>)
                 }

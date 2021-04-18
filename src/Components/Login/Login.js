@@ -64,22 +64,6 @@ const Login = () => {
             });
 
     }
-//     const signInParmenent =()=>{
-//         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-//   .then(() => {
-//     var provider = new firebase.auth.GoogleAuthProvider();
-//     // In memory persistence will be applied to the signed in Google user
-//     // even though the persistence was set to 'none' and a page redirect
-//     // occurred.
-//     return firebase.auth().signInWithRedirect(provider);
-//   })
-//   .catch((error) => {
-//     // Handle Errors here.
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-//   });
-//     }
-    
 const setUserToken = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
         sessionStorage.setItem('token',idToken);
@@ -205,13 +189,11 @@ const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const passMatched = password.firstPassword === password.confirmPassword && password.firstPassword.length > 0;
     const passDidNotMatched = password.confirmPassword.length > 0 && password.firstPassword !== password.confirmPassword;
     console.log(watch("example")); // watch input value by passing the name of it
-    // {...register("name", { required: true, maxLength: 20 })}
-    // const { register, handleSubmit, watch, formState: { errors } } = useForm();
     return (
-        <div>
+        <div >
             <Navbar></Navbar>
-            <div className="row">
-                <div className="col-md-7">
+            <div style={{backgroundColor:'#1F1F25',height:'100vh'}}>
+                <div className="">
                     <div className="login-page-design ">
                         <form className="form-design" onSubmit={handleSubmit(onSubmit)}>
                             <h2 >{!oldUser ? 'Create An Account' : 'Please Login Your Account'}</h2>
@@ -246,11 +228,7 @@ const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
                     </div>
                 </div>
-                <div className="col-md-4">
-                    {/* <div>
-                        <img className="img-fluid pr-5 mt-5" src={LoginImage} alt=""/>
-                    </div> */}
-                </div>
+              
             </div>
         </div>
     );

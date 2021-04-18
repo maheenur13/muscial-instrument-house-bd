@@ -52,6 +52,9 @@ const Sidebar = () => {
                     {isAdmin &&<MenuItem icon="ok">
                        <Link to="/dashboard/updateServices">Update Services</Link>
                         </MenuItem>}
+                    {isAdmin &&<MenuItem icon="ok">
+                       <Link to="/dashboard/instruments">Add Instruments</Link>
+                        </MenuItem>}
                     
                 </Menu>
                 <SidebarFooter className="mt-auto pb-3 pt-3">

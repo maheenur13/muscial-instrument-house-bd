@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Footer from '../Footer/Footer';
+import Navigationbar from '../Navigationbar/Navigationbar';
 import './Constact.css';
 // import contactImage from '../../../img/contact/contact.jpg';
 const Contact = () => {
@@ -10,6 +12,7 @@ const Contact = () => {
 
     return (
         <section className="form-section pt-5 pb-5">
+            {/* <Navigationbar></Navigationbar> */}
             <h1 className="text-white text-center pb-4">Let's Get In Touch</h1>
                 <div className="from-design">
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -26,7 +29,7 @@ const Contact = () => {
                     <input className="bg-danger text-white" type="submit" />
                 </form>
                 </div>
-            
+            {/* <Footer></Footer> */}
         </section>
     );
 };

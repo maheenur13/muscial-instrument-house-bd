@@ -1,0 +1,6 @@
+.image-style{
+    transition: .2s;
+}
+.image-style:hover{
+    transform: translateY(-8px);
+}

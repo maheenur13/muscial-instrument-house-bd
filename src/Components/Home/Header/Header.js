@@ -15,30 +15,18 @@ const Header = () => {
             <Navigationbar></Navigationbar>
             <div className="carousel-container">
                 <Carousel fade>
-                    <Carousel.Item interval={1200}>
-                        <img
-                            className="d-block w-100 bg-image-style"
-                            src={bg1}
-                            alt="First slide"
-                        />
-                        
-                        <Carousel.Caption >
-                            <div className="caption-box">
-                            <h1 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h1>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </div>
-                           
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                    
                     <Carousel.Item interval={800}>
                         <img
                             className="d-block w-100 bg-image-style"
-                            src={bg2}
+                            src={bg4}
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div className="caption-box">
+                            <h3 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h3>
+                            <p style={{textAlign:'justify'}}>A musical instrument is used to make musical sounds. Once humans moved from making sounds with their bodies..</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1600}>
@@ -48,19 +36,23 @@ const Header = () => {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <div className="caption-box">
+                            <h3 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h3>
+                            <p style={{textAlign:'justify'}}>A musical instrument is used to make musical sounds. Once humans moved from making sounds with their bodies.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1300}>
                         <img
                             className="d-block w-100 bg-image-style"
-                            src={bg4}
+                            src={bg2}
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <div className="caption-box">
+                            <h3 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h3>
+                            <p style={{textAlign:'justify'}}>A musical instrument is used to make musical sounds. Once humans moved from making sounds with their bodies.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -69,9 +61,11 @@ const Header = () => {
                             src={bg5}
                             alt="Third slide"
                         />
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                       <Carousel.Caption>
+                        <div className="caption-box">
+                            <h3 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h3>
+                            <p style={{textAlign:'justify'}}>A musical instrument is used to make musical sounds. Once humans moved from making sounds with their bodies.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

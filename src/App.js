@@ -12,8 +12,13 @@ import { createContext, useState } from 'react';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Book from './Components/Dashboard/Book/Book';
-import ServiceClaimed from './Components/ServiceClaimed/ServiceClaimed';
+// import ServiceClaimed from './Components/ServiceClaimed/ServiceClaimed';
 import Footer from './Components/Home/Footer/Footer';
+import About from './Components/About/About';
+import Contact from './Components/Home/Contact/Contact';
+import MainContact from './Components/MainContact/MainContact';
+import AllProducts from './Components/AllProducts/AllProducts';
+import SingleProduct from './Components/SingleProduct/SingleProduct';
 
 export const userContext = createContext();
 function App() {
@@ -36,10 +41,20 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <Route path="/allProducts">
+            <AllProducts></AllProducts>
+          </Route>
+          <Route path="/contact">
+            <MainContact></MainContact>
+          </Route>
           <PrivateRoute path="/serviceClaimed/:id">
             <Dashboard></Dashboard>
-            {/* <Footer></Footer> */}
-          {/* <ServiceClaimed></ServiceClaimed> */}
+          </PrivateRoute>
+          <PrivateRoute path="/productClaimed/:id">
+            <SingleProduct></SingleProduct>
           </PrivateRoute>
         </Switch>
       </Router>
