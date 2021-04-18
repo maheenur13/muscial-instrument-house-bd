@@ -5,7 +5,10 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../../App';
 import { isAdminContext } from '../Dashboard/Dashboard';
-// import GoToHome from '../../GoTOHome/GoTOHome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboardList,faBookmark,faSearchDollar,faMarker,faUserPlus,faEdit,faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+
+
 const Sidebar = () => {
     const [loggedInUser,setLoggedInUser]=useContext(userContext);
     const [isAdmin, setIsAdmin]=useContext(isAdminContext);
@@ -31,28 +34,28 @@ const Sidebar = () => {
             
             <ProSidebar  style={{height:'100vh',width:'100%',left:'0',position:'absolute'}}>
                 <Menu  iconShape="square">
-                    {!isAdmin &&<MenuItem icon="ok">
+                    {!isAdmin &&<MenuItem icon={<FontAwesomeIcon icon={faBookmark}/>}>
                        <Link   to="/dashboard/book">Book</Link>
                         </MenuItem>}
-                    <MenuItem icon="ok">
+                    <MenuItem icon={<FontAwesomeIcon icon={faClipboardList}/>}>
                         <Link to="/dashboard/bookinglists">Booking List</Link>    
                         </MenuItem>
-                    <MenuItem icon="ok">
+                    <MenuItem icon={<FontAwesomeIcon icon={faClipboardList}/>}>
                         <Link  to="/dashboard/orderlist">Order List</Link>
                         </MenuItem>
-                    {!isAdmin && <MenuItem icon="ok">
+                    {!isAdmin && <MenuItem icon={<FontAwesomeIcon icon={faSearchDollar}/>}>
                         <Link  to="/dashboard/review">Review</Link>
                         </MenuItem>}
-                    {isAdmin && <MenuItem icon="ok">
+                    {isAdmin && <MenuItem icon={<FontAwesomeIcon icon={faUserPlus}/>}>
                         <Link  to="/dashboard/makeadmin">Make Admin</Link>
                         </MenuItem>}
-                    {isAdmin &&<MenuItem icon="ok">
+                    {isAdmin &&<MenuItem icon={<FontAwesomeIcon icon={faMarker}/>}>
                        <Link to="/dashboard/addservices">Add Services</Link>
                         </MenuItem>}
-                    {isAdmin &&<MenuItem icon="ok">
+                    {isAdmin &&<MenuItem icon={<FontAwesomeIcon icon={faEdit}/>}>
                        <Link to="/dashboard/updateServices">Update Services</Link>
                         </MenuItem>}
-                    {isAdmin &&<MenuItem icon="ok">
+                    {isAdmin &&<MenuItem icon={<FontAwesomeIcon icon={faPuzzlePiece}/>}>
                        <Link to="/dashboard/instruments">Add Instruments</Link>
                         </MenuItem>}
                     

@@ -24,7 +24,7 @@ const Navigationbar = () => {
     }
   return (
     <Navbar  className="navigation-design" collapseOnSelect expand="lg">
-      <Navbar.Brand className="text-white" href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Brand className="text-white" href="#home">BD-MUSIC-INSTRUMENT-HOUSE</Navbar.Brand>
       
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
