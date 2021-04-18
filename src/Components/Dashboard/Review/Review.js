@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { userContext } from '../../../App';
 const Review = () => {
+    const [loggedInUser,setLoggedInUser]=useContext(userContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit=(data)=>{
+        data.image=loggedInUser.photoURL;
         console.log(data);
         fetch('http://localhost:5000/addReviews',{
             method:'POST',

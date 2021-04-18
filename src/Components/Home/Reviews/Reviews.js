@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Review from './Review';
-
+import { CardDeck, Card } from 'react-bootstrap';
 const Reviews = () => {
     const [reviews,setReviews]=useState([]);
     useEffect(()=>{
@@ -11,12 +11,14 @@ const Reviews = () => {
         })
     },[])
     return (
-        <section className="review-section border pt-5 pb-5" style={{backgroundColor:'white'}}>
-            <div>
+        <section  style={{backgroundColor:'white',padding:'30px'}}>
+            <div >
                 <h1 className="text-center pb-4">Reviews</h1>
+                <CardDeck className="container m-auto ">
                 {
                     reviews.map(review=><Review review={review} key={review._id}></Review>)
                 }
+                </CardDeck>
             </div>
         </section>
     );

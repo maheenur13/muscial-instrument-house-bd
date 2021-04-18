@@ -11,10 +11,15 @@ import { useContext } from 'react';
 import { userContext } from '../../../App';
 
 const Navigationbar = () => {
+  
   const [loggedInUser,setLoggedInUser]=useContext(userContext);
     const {name,photoURL}= loggedInUser;
     console.log('loggedinuser ',loggedInUser)
-    console.log('name',name);
+    // console.log('name',name);
+    const logOutHandler = () =>{
+      sessionStorage.clear();
+      setLoggedInUser({});
+    }
   return (
     <Navbar  className="navigation-design" collapseOnSelect expand="lg">
       <Navbar.Brand className="text-white" href="#home">React-Bootstrap</Navbar.Brand>
@@ -30,7 +35,7 @@ const Navigationbar = () => {
           <Link to="/contact" className="text-white mr-5">Contact</Link>
           {!name?<Link to="/login" className="text-white mr-5">Login</Link>
           :
-          <Link to="/login" className="text-white mr-5" onClick={()=>setLoggedInUser({})}>Logout</Link>
+          <Link to="/login" className="text-white mr-5" onClick={logOutHandler}>Logout</Link>
           }
 
         </Nav>

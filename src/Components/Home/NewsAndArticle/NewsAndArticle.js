@@ -4,53 +4,54 @@ import image2 from '../../../img/homeBg/News/linkon.jpg';
 import image3 from '../../../img/homeBg/News/oni.jpg';
 import './NewsAndArticle.css';
 import { Card, Button, CardGroup,CardDeck } from 'react-bootstrap';
+
+const newsAndArticles=[
+    {
+        image:image1,
+        title:'What Komol Bhai said?',
+        description:`This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.`
+    },
+    {
+        image:image2,
+        title:'Linkon Bhai The Greatest Musician Of Bangladesh!',
+        description:`This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.`
+    },
+    {
+        image:image3,
+        title:'',
+        description:`This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.`
+    },
+    {
+        image:image3,
+        title:'',
+        description:`This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.`
+    },
+]
 const NewsAndArticle = () => {
     return (
         <section className="news-article-design pt-5 pb-5">
-            <div className="w-75 m-auto">
-                <CardDeck>
-                    <Card className=" shadow-sm">
-                        <Card.Img variant="top" src={image1} />
+            <h1 className="text-center mb-5">News</h1>
+                <div className="m-auto w-75 d-flex justify-content-around around-items-center flex-wrap" >
+                    {
+                        newsAndArticles.map(article=><Card style={{width:'300px'}} className="border shadow-sm">
+                        <Card.Img style={{width:'100%'}} variant="top" src={article.image} />
                         <Card.Body>
-                            <Card.Title>Card title</Card.Title>
+                            <Card.Title>{article.title}</Card.Title>
                             <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                {article.description}
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                        <Button className="w-100" variant="primary">Go somewhere</Button>
+                        <Button className="w-100" variant="outline-info">View Full Article</Button>
                         </Card.Footer>
-                    </Card>
-                    <Card className=" shadow-sm">
-                        <Card.Img variant="top" src={image2} />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This card has supporting text below as a natural lead-in to additional
-                                content.{' '}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                        <Button className="w-100" variant="primary">Go somewhere</Button>
-                        </Card.Footer>
-                    </Card>
-                    <Card className="shadow-sm">
-                        <Card.Img variant="top" src={image3} />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to
-                                show that equal height action.
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                        <Button className="w-100" variant="primary">Go somewhere</Button>
-                        </Card.Footer>
-                    </Card>
-                </CardDeck>
-            </div>
+                    </Card>)
+                    }
+                    
+                </div>
         </section>
     );
 };

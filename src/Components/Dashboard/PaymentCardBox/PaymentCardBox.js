@@ -102,7 +102,10 @@ const CARD_OPTIONS = {
       </svg>
     </button>
   );
-const PaymentCardBox = () => {
+const PaymentCardBox = ({bookingName,price}) => {
+  const [bookingInfo,setBookingInfo]=useState({});
+
+  console.log('price',price);
     const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState(null);
@@ -114,8 +117,29 @@ const PaymentCardBox = () => {
     phone: "",
     name: ""
   });
+const bookingInformation =()=>{
+  bookingInfo.email=billingDetails.email;
+  bookingInfo.phone=billingDetails.phone;
+  bookingInfo.displayName=billingDetails.name;
+  bookingInfo.bookingName= bookingName;
+  bookingInfo.price=price;
+  bookingInfo.bookingDate= new Date().toDateString();
+    console.log('all data',bookingInfo);
+  fetch('http://localhost:5000/addBookings',{
+    method:'POST',
+    headers:{'content-type':'application/json'},
+    body:JSON.stringify(bookingInfo)
 
+})
+.then(res=>res.json())
+.then(succ=>{
+    if(succ){
+        alert('data inserted successfully');
+    }
+})
+}
   const handleSubmit = async (event) => {
+    console.log('enterd here')
     event.preventDefault();
     // console.log(event)
     if (!stripe || !elements) {
@@ -138,7 +162,8 @@ const PaymentCardBox = () => {
       card: elements.getElement(CardElement),
       billing_details: billingDetails
     });
-console.log(billingDetails);
+    bookingInformation();
+console.log('maheeeenur',billingDetails);
     setProcessing(false);
 
     if (payload.error) {
@@ -221,7 +246,7 @@ console.log(billingDetails);
       </fieldset>
       {error && <ErrorMessage>{error.message}</ErrorMessage>}
       <SubmitButton processing={processing} error={error} disabled={!stripe}>
-        Pay $25
+        Pay {price}
       </SubmitButton>
     </form>
   );

@@ -15,10 +15,12 @@ import MakeAdmin from '../../Admin/MakeAdmin/MakeAdmin';
 import AddServices from '../../Admin/AddServices/AddServices';
 import Navigationbar from '../../../Components/Home/Navigationbar/Navigationbar'
 const Dashboard = () => {
+
     return (
-        
-        <Router>
+        <div>
             <Navigationbar></Navigationbar>
+        <Router>
+            
                 <div className="d-flex">
                     <div className="col-md-2">
                         <Sidebar></Sidebar>
@@ -27,6 +29,9 @@ const Dashboard = () => {
                     <div  className="col-md-10  mainbar-design">
                     <Switch>
                             <Route path="/dashboard/book">
+                                <Book></Book>
+                            </Route>
+                            <Route path="/serviceClaimed/:id">
                                 <Book></Book>
                             </Route>
                             <Route  path="/dashboard/bookinglists">
@@ -52,6 +57,7 @@ const Dashboard = () => {
 
                 </div>
         </Router>
+        </div>
     );
 };
 

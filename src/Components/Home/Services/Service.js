@@ -9,11 +9,13 @@ const Service = ({service}) => {
             history.push(url);
     }
     return (
-        <div style={{border:'4px solid white'}} className="text-white  d-flex flex-column justify-content-center align-items-center p-3">
+        <div className="text-white service-box d-flex flex-column justify-content-center align-items-center m-2 p-5">
                         <h3 className="pb-2">{service.name}</h3>
-                        <img style={{height:'200px',width:'200px'}} src={service.image} alt="" />
-                        <h5>{service.price}</h5>
-                        <Button onClick={()=>handleClick(service._id)} className="mt-3" variant="warning"> Click To Book</Button>
+                        <div>
+                        <img className=" p-3 " style={{height:'150px',width:'150px'}} src={`data:image/png;base64,${service.image.img}`} alt="" />
+                        </div>
+                        <h6 ><span>Price: </span>{service.price}$</h6>
+                        <Button onClick={()=>handleClick(service._id)} className="mt-3" variant="primary"> Click To Book</Button>
                     </div>
     );
 };

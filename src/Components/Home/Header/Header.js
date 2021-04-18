@@ -7,7 +7,7 @@ import bg1 from '../../../img/homeBg/bg-1.jpg'
 import bg2 from '../../../img/homeBg/bg-2.jpg';
 import bg3 from '../../../img/homeBg/bg-3.jpg';
 import bg4 from '../../../img/homeBg/bg-4.jpg';
-import bg5 from '../../../img/homeBg/drums.jpg';
+import bg5 from '../../../img/homeBg/bg-5.jpg';
 import './Header.css';
 const Header = () => {
     return (

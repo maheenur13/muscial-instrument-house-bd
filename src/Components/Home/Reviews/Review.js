@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CardDeck, Card } from 'react-bootstrap';
+import { userContext } from '../../../App';
 import image1 from '../../../img/homeBg/News/komol.jpg'
 const Review = ({review}) => {
-    return (
-        <div>
-            <CardDeck className="container m-auto">
-                    <Card>
-                        <Card.Img variant="top"  src={image1} />
+    const [loggedInUser,setLoggedInUser]=useContext(userContext);
+    return (  
+                    <Card className="w-25">
+                        <Card.Img variant="top" style={{width:'90px',borderRadius:'50%',margin:'auto',marginTop:'15px'}}  src={review.image} />
                         <Card.Body>
-                            <Card.Title>{review.name}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className="text-center">{review.name}</Card.Title>
+                            <Card.Text className="text-center">
                                 {review.description}
                             </Card.Text>
                         </Card.Body>
@@ -18,8 +18,8 @@ const Review = ({review}) => {
                         </Card.Footer>
                     </Card>
                    
-                </CardDeck>
-        </div>
+                
+       
     );
 };
 

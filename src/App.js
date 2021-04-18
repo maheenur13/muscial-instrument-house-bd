@@ -13,6 +13,7 @@ import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Book from './Components/Dashboard/Book/Book';
 import ServiceClaimed from './Components/ServiceClaimed/ServiceClaimed';
+import Footer from './Components/Home/Footer/Footer';
 
 export const userContext = createContext();
 function App() {
@@ -34,9 +35,11 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/serviceClaimed/:id">
-          <ServiceClaimed></ServiceClaimed>
-          </Route>
+          <PrivateRoute path="/serviceClaimed/:id">
+            <Dashboard></Dashboard>
+            {/* <Footer></Footer> */}
+          {/* <ServiceClaimed></ServiceClaimed> */}
+          </PrivateRoute>
         </Switch>
       </Router>
     </div>

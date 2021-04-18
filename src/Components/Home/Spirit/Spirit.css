@@ -10,8 +10,12 @@
 
 }
 .spirit-section-design{
-    background-image: linear-gradient(120deg, #42424246, #0000003b);
+    background-image: linear-gradient(120deg, #5250026e, #00000057);
     overflow: hidden;
     height:400px;
     position: relative; 
+}
+.spirit-section-design div:hover{
+    transition: .2s;
+    background-color: rgba(0, 0, 0, 0.582);
 }
