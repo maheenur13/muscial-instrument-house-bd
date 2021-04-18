@@ -123,6 +123,7 @@ const bookingInformation =()=>{
   bookingInfo.displayName=billingDetails.name;
   bookingInfo.bookingName= bookingName;
   bookingInfo.price=price;
+  bookingInfo.currentStatus = 'Pending';
   bookingInfo.bookingDate= new Date().toDateString();
     console.log('all data',bookingInfo);
   fetch('http://localhost:5000/addBookings',{

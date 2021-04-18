@@ -22,7 +22,7 @@ const Header = () => {
                             alt="First slide"
                         />
                         
-                        <Carousel.Caption className="carousel-caption">
+                        <Carousel.Caption >
                             <div className="caption-box">
                             <h1 className="" style={{textAlign:'center'}}>Musical Instruments House BD</h1>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

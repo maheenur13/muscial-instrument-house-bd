@@ -18,6 +18,7 @@ import Footer from './Components/Home/Footer/Footer';
 export const userContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState([]);
+  
   return (
     <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <div>

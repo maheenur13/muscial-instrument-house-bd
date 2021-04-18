@@ -1,19 +1,23 @@
 .spirit-section-design::before{
-    content:'';
-    background:url('../../../img/homeBg/spirit/bg.jpg')center center/cover;
-    position: fixed;
-    top: 0%;
-    left:0;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    background:linear-gradient(rgba(0, 0, 0, 0.479),rgba(5, 17, 68, 0.664));
 
 }
 .spirit-section-design{
-    background-image: linear-gradient(120deg, #5250026e, #00000057);
+    background-image: url('../../../img/homeBg/spirit/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
-    height:400px;
     position: relative; 
+    z-index: 2;
 }
 .spirit-section-design div:hover{
     transition: .2s;

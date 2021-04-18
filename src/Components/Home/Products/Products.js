@@ -34,7 +34,7 @@ const Products = () => {
                 </div>
                 
                 </div>
-                <Button className="m-auto" style={{width:'150px'}}  variant="warning">View All</Button>
+                <button className="m-auto button-design" style={{width:'150px'}}  variant="warning">View All</button>
             </div>
 
         </section>

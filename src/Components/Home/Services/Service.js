@@ -10,12 +10,12 @@ const Service = ({service}) => {
     }
     return (
         <div className="text-white service-box d-flex flex-column justify-content-center align-items-center m-2 p-5">
-                        <h3 className="pb-2">{service.name}</h3>
+                        <h3 className="pb-2 ">{service.name}</h3>
                         <div>
                         <img className=" p-3 " style={{height:'150px',width:'150px'}} src={`data:image/png;base64,${service.image.img}`} alt="" />
                         </div>
                         <h6 ><span>Price: </span>{service.price}$</h6>
-                        <Button onClick={()=>handleClick(service._id)} className="mt-3" variant="primary"> Click To Book</Button>
+                        <button  onClick={()=>handleClick(service._id)} className="mt-3 button-design pr-4 pl-4" variant="primary"> Click To Book</button>
                     </div>
     );
 };

@@ -4,10 +4,12 @@ import { ProSidebar, SidebarFooter, SidebarHeader, Menu, MenuItem, SubMenu } fro
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../../App';
+import { isAdminContext } from '../Dashboard/Dashboard';
 // import GoToHome from '../../GoTOHome/GoTOHome';
 const Sidebar = () => {
     const [loggedInUser,setLoggedInUser]=useContext(userContext);
-    const [isAdmin,setIsAdmin]=useState(false);
+    const [isAdmin, setIsAdmin]=useContext(isAdminContext);
+
     useEffect(()=>{
         fetch('http://localhost:5000/isAdmin',{
             method: 'POST',
@@ -20,35 +22,35 @@ const Sidebar = () => {
               setIsAdmin(true);
             }
             
-            console.log('is Admin',isAdmin);
+            // console.log('is Admin',isAdmin);
         })
     },[])
-    const handleClick=(e)=>{
-        console.log(e.target.innerText);
-        
-        // e.target.style.color= 'yellow';
-    }
+
     return (
         <div>
+            
             <ProSidebar  style={{height:'100vh',width:'100%',left:'0',position:'absolute'}}>
                 <Menu  iconShape="square">
                     {!isAdmin &&<MenuItem icon="ok">
-                        <Link className="text-warning" onClick={handleClick}  to="/dashboard/book">Book</Link> 
+                       <Link   to="/dashboard/book">Book</Link>
                         </MenuItem>}
                     <MenuItem icon="ok">
-                        <Link onClick={handleClick} to="/dashboard/bookinglists">Booking List</Link>
+                        <Link to="/dashboard/bookinglists">Booking List</Link>    
                         </MenuItem>
                     <MenuItem icon="ok">
                         <Link  to="/dashboard/orderlist">Order List</Link>
                         </MenuItem>
                     {!isAdmin && <MenuItem icon="ok">
-                        <Link onClick={handleClick} to="/dashboard/review">Review</Link>
+                        <Link  to="/dashboard/review">Review</Link>
                         </MenuItem>}
                     {isAdmin && <MenuItem icon="ok">
                         <Link  to="/dashboard/makeadmin">Make Admin</Link>
                         </MenuItem>}
                     {isAdmin &&<MenuItem icon="ok">
                        <Link to="/dashboard/addservices">Add Services</Link>
+                        </MenuItem>}
+                    {isAdmin &&<MenuItem icon="ok">
+                       <Link to="/dashboard/updateServices">Update Services</Link>
                         </MenuItem>}
                     
                 </Menu>

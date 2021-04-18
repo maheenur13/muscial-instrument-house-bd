@@ -2,17 +2,7 @@
     /* width: 80%; */
     height:920px;
 }
-.carousel-container{
-   
-    /* height:600px; */
-    /* border: 2px solid yellow; */
-}
-.carousel-caption{
-    /* position:absolute; */
-    top: 40%;
-    position:fixed;
-    
-}
+
 .caption-box{
    
     border: 7px solid rgb(61, 61, 61);

@@ -17,9 +17,9 @@ const Book = () => {
             .then(data => setServices(data))
     }, [id])
     const booking = services.find(service => service._id === id);
-    console.log('all bokkin',booking);
+    // console.log('all bokkin',booking);
     // const {name,price}=booking;
-    console.log('id is', id);
+    // console.log('id is', id);
     
     return (
         <div className="mt-5 mb-5">

@@ -1,3 +1,22 @@
 .news-article-design{
     background-color:white;
 }
+.button-design{
+    background-color: rgb(37, 33, 23);
+    outline: none;
+    border: none;
+    color: white;
+    padding: 6px;
+    transition: .3s;
+}
+.button-design:hover{
+    background-color:rgb(56, 19, 19) ;
+}
+.card-design{
+    transition: .3s;
+
+}
+.card-design:hover{
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 10px 2px  rgba(59, 59, 59, 0.315);
+}

@@ -14,9 +14,9 @@ const Services = () => {
 
     },[])
     return (
-        <section className="services-design pb-5">
+        <section className="services-design pb-5 ">
             <h1 className="bg-white text-center pt-4 pb-4">our services</h1>
-            <div className=" w-75 m-auto">
+            <div className=" w-75 m-auto pt-5">
                 <div className="w-75 p-3 m-auto d-flex justify-content-around align-items-center flex-wrap">
 
                    { 

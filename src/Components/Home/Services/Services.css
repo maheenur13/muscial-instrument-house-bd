@@ -19,7 +19,8 @@
 .service-box{
     border-radius: 3px;
     border: 1px solid rgba(255, 255, 255, 0.342);
-    background-color: rgba(5, 5, 5, 0.363);
+    background-color: rgba(74, 69, 124, 0.555);
+    color: black;
 }
 .service-box:hover img{
     animation: shake .6s;
